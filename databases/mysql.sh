@@ -82,3 +82,32 @@ SELECT User, Host FROM mysql.user; # List all current MySQL users
 
 SET GLOBAL general_log = 'ON'; # Enable query logging
 SHOW FULL PROCESSLIST; # Show the last queries executed in MySQL
+
+# *****************************************************************************
+# Altering Table Structure
+# *****************************************************************************
+
+ALTER TABLE table_name ADD column_name datatype;               # Add a new column to an existing table
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;     # Change the data type of a column
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;     # Rename a column (MySQL 8.0+)
+ALTER TABLE table_name DROP COLUMN column_name;                # Remove a column from a table
+ALTER TABLE old_table_name RENAME TO new_table_name;           # Rename an entire table
+
+# *****************************************************************************
+# Indexes (Performance Tuning)
+# *****************************************************************************
+
+CREATE INDEX idx_name ON table_name (column_name);             # Create a standard index to speed up queries
+CREATE UNIQUE INDEX idx_name ON table_name (column_name);      # Create a unique index (no duplicate values)
+SHOW INDEX FROM table_name;                                    # List all indexes on a specific table
+DROP INDEX idx_name ON table_name;                             # Remove an index from a table
+EXPLAIN SELECT * FROM table_name WHERE condition;              # Analyze how MySQL executes a query (Check index usage)
+
+# *****************************************************************************
+# Transactions (Data Integrity)
+# *****************************************************************************
+
+START TRANSACTION;                                             # Begin a new transaction
+COMMIT;                                                        # Save all changes made during the transaction
+ROLLBACK;                                                      # Undo all changes if an error occurs before commit
+SET AUTOCOMMIT = 0;                                            # Disable automatic commits for the current session
