@@ -45,6 +45,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Functional
 - [JavaScript](languages/javascript.js)
+- [Typescript](languages/typescript.md)
 
 </details>
 
@@ -73,6 +74,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 ---
 
+
 ### 🌐 Frontend
 
 <details>
@@ -81,6 +83,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### Basics
 - [HTML5](frontend/html5.html)
 - [CSS3](frontend/css3.css)
+- [Typescript](frontend/typescript.ts)
 
 #### Frameworks
 - [React.js](frontend/react.js)
@@ -89,7 +92,6 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Ember.js](frontend/ember.js)
 - [Angular (2+)](frontend/angular.js)
 - [AngularJS](frontend/angularjs.js)
-
 </details>
 
 ---
